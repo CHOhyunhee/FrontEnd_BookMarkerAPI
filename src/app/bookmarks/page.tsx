@@ -15,6 +15,7 @@ export default async function BookmarkPage(props: Props)  {
 
   return (
     <div>
+        <h1>Welcome to Bookmarker</h1>
         {/* Props */}
         <Bookmarks bookmarks={bookmarksRes} /> 
     </div>
