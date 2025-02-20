@@ -21,7 +21,7 @@ const NavBar = () => (
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
               {/* link 경로 연결을 따로할 필요 없음, app 아래 디렉토리 알아서 찾아감 */}
-              <Link href="/add" className="nav-link">Add Bookmark</Link>
+              <Link href="/bookmarks/add" className="nav-link">Add Bookmark</Link>
             </li>
           </ul>
         </div>
