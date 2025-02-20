@@ -4,13 +4,14 @@ import Bookmark from '@/app/components/Bookmark';
 import Pagination from '@/app/components/Pagination';
 
 type Props = {
-    bookmarks: BookmarksResponse
+    bookmarks: BookmarksResponse,
+    query?: string
 }
 
-const Bookmarks: React.FC<Props> = ({bookmarks}) => {
+const Bookmarks: React.FC<Props> = ({bookmarks, query}) => {
     return (
         <div>
-            <Pagination bookmarks={bookmarks} />
+            <Pagination bookmarks={bookmarks} query={query}/>
             {
             // key: virtual dom (react내부적으로 화면 rendering) 때문에..
             // 바뀐 부분만 빠르게 update...
