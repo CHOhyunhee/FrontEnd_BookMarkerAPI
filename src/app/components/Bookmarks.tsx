@@ -1,9 +1,9 @@
-import { BookmarkType } from '@/types';
 import React from 'react';
+import { BookmarksResponse } from '@/types';
 import Bookmark from '@/app/components/Bookmark';
 
 type Props = {
-    bookmarks: BookmarkType[]
+    bookmarks: BookmarksResponse
 }
 
 const Bookmarks: React.FC<Props> = ({bookmarks}) => {
@@ -13,7 +13,7 @@ const Bookmarks: React.FC<Props> = ({bookmarks}) => {
             {
             // key: virtual dom (react내부적으로 화면 rendering) 때문에..
             // 바뀐 부분만 빠르게 update...
-            bookmarks.map(bookmark => 
+            bookmarks.data.map(bookmark => 
                 <Bookmark key={bookmark.id} bookmark={bookmark} />
             )
             }            
